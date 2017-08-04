@@ -44,32 +44,32 @@ void init_target_properties(void)
 
 	if (strstr(bootloader,"J500FN")) {
 		device = (char *)"j5nlte";
-		model = (char *)"SM-G530FN";
+		model = (char *)"SM-J500FN";
 		network_type=LTE_DEVICE;
 	}
 	else if (strstr(bootloader,"J500F")) {
 		device = (char *)"j5lte";
-		model = (char *)"SM-G530F";
+		model = (char *)"SM-J500F";
 		network_type=LTE_DEVICE;
 	}
 	else if (strstr(bootloader,"J500H")) {
 		device = (char *)"j53gxx";
-		model = (char *)"SM-G530H";
+		model = (char *)"SM-J500H";
 		network_type=GSM_DEVICE;
 	}
 	else if (strstr(bootloader,"J500M")) {
 		device = (char *)"j5ltedx";
-		model = (char *)"SM-G530M";
+		model = (char *)"SM-J500M";
 		network_type=LTE_DEVICE;
 	}
 	else if (strstr(bootloader,"J500Y")) {
 		device = (char *)"j5ltedo";
-		model = (char *)"SM-G530Y";
+		model = (char *)"SM-J500Y";
 		network_type=LTE_DEVICE;
 	}
 	else if (strstr(bootloader,"J500G")) {
 		device = (char *)"j5lteub";
-		model = (char *)"SM-G530G";
+		model = (char *)"SM-J500G";
 		network_type=LTE_DEVICE;
 	}
 	else if (strstr(bootloader,"J5008")) {
