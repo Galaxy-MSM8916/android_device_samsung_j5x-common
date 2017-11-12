@@ -1,5 +1,3 @@
-# RIL
+# SHIM RIL
 PRODUCT_PACKAGES += \
-	libril \
-	librilutils \
-	rild
+    libril_shim

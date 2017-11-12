@@ -1,2 +1,0 @@
-# RIL
-BOARD_MODEM_TYPE := xmm7260
