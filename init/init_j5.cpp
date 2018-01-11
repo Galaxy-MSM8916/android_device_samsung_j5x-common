@@ -102,6 +102,14 @@ void init_target_properties(void)
 		network_type=LTE_DEVICE;
 		version_release = (char *)"5.1";
 	}
+	else if (bootloader.find("J510FN") == 0) {
+		build_id = (char *)"NMF26X";
+		device = (char *)"j5xnlte";
+		model = (char *)"SM-J510FN";
+		name = (char *)"j5xnlte";
+		network_type=LTE_DEVICE;
+		version_release = (char *)"7.1.1";
+	}
 	else {
 		return;
 	}
