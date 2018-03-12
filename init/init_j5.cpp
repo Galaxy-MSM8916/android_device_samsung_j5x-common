@@ -45,14 +45,7 @@ void init_target_properties(void)
 	/* get the bootloader string */
 	std::string bootloader = android::base::GetProperty("ro.bootloader", "");
 
-	if (bootloader.find("J500FN") == 0) {
-		build_id = (char *)"MMB29M";
-		device = (char *)"j5nlte";
-		model = (char *)"SM-J500FN";
-		name = (char *)"j5nltexx";
-		network_type=LTE_DEVICE;
-		version_release = (char *)"6.0.1";
-	else if (bootloader.find("J510FN") == 0) {
+	if (bootloader.find("J510FN") == 0) {
 		build_id = (char *)"NMF26X";
 		device = (char *)"j5xnlte";
 		model = (char *)"SM-J510FN";
