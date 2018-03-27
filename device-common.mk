@@ -19,12 +19,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, device/samsung/msm8916-common/msm8916.mk)
 
 # Inherit from vendor
-$(call inherit-product-if-exists, vendor/samsung/j5-common/j5-common-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/j5x-common/j5x-common-vendor.mk)
 
-LOCAL_PATH := device/samsung/j5-common
+LOCAL_PATH := device/samsung/j5x-common
 
 # Common overlay
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+DEVICE_PACKAGE_OVERLAYS += \
+	$(LOCAL_PATH)/overlay \
+	$(LOCAL_PATH)/overlay-lineage
 
 # Include package config fragments
 include $(LOCAL_PATH)/product/*.mk
