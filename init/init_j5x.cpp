@@ -57,6 +57,11 @@ void init_target_properties(void)
 		model = (char *)"SM-J510F";
 		set_lte_properties();
 	}
+	else if (bootloader.find("J5108") == 0) {
+		device = (char *)"j5xltecmcc";
+		model = (char *)"SM-J5108";
+		set_lte_properties();
+	}
 	else {
 		return;
 	}
