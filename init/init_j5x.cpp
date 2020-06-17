@@ -116,6 +116,7 @@ void set_dsds_properties()
 	android::init::property_set("ro.telephony.ril.config", "simactivation");
 	android::init::property_set("persist.radio.multisim.config", "dsds");
 	android::init::property_set("rild.libpath2", "/system/lib/libsec-ril-dsds.so");
+	android::init::property_set("ro.multisim.audio_follow_default_sim", "false");
 }
 
 void set_gsm_properties()
