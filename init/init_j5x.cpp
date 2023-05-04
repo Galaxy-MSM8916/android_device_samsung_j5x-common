@@ -46,7 +46,7 @@
 using android::base::GetProperty;
 using android::base::ReadFileToString;
 using android::base::Trim;
-using android::init::property_set;
+using android::base::SetProperty;
 
 void property_override(char const prop[], char const value[])
 {
@@ -112,25 +112,25 @@ void set_fingerprint()
 
 void set_dsds_properties()
 {
-	android::init::property_set("ro.multisim.simslotcount", "2");
-	android::init::property_set("ro.telephony.ril.config", "simactivation");
-	android::init::property_set("persist.radio.multisim.config", "dsds");
-	android::init::property_set("rild.libpath2", "/system/lib/libsec-ril-dsds.so");
-	android::init::property_set("ro.multisim.audio_follow_default_sim", "false");
+	android::base::SetProperty("ro.multisim.simslotcount", "2");
+	android::base::SetProperty("ro.telephony.ril.config", "simactivation");
+	android::base::SetProperty("persist.radio.multisim.config", "dsds");
+	android::base::SetProperty("rild.libpath2", "/system/lib/libsec-ril-dsds.so");
+	android::base::SetProperty("ro.multisim.audio_follow_default_sim", "false");
 }
 
 void set_gsm_properties()
 {
-	android::init::property_set("telephony.lteOnCdmaDevice", "0");
-	android::init::property_set("ro.telephony.default_network", "9");
+	android::base::SetProperty("telephony.lteOnCdmaDevice", "0");
+	android::base::SetProperty("ro.telephony.default_network", "9");
 }
 
 void set_lte_properties()
 {
-	android::init::property_set("persist.radio.lte_vrte_ltd", "1");
-	android::init::property_set("telephony.lteOnCdmaDevice", "0");
-	android::init::property_set("telephony.lteOnGsmDevice", "1");
-	android::init::property_set("ro.telephony.default_network", "10");
+	android::base::SetProperty("persist.radio.lte_vrte_ltd", "1");
+	android::base::SetProperty("telephony.lteOnCdmaDevice", "0");
+	android::base::SetProperty("telephony.lteOnGsmDevice", "1");
+	android::base::SetProperty("ro.telephony.default_network", "10");
 }
 
 void set_target_properties(const char *device, const char *model)
@@ -138,7 +138,7 @@ void set_target_properties(const char *device, const char *model)
 	property_override_dual("ro.product.device", "ro.product.vendor.device", device);
 	property_override_dual("ro.product.model", "ro.product.vendor.model", model);
 
-	android::init::property_set("ro.ril.telephony.mqanelements", "6");
+	android::base::SetProperty("ro.ril.telephony.mqanelements", "6");
 
 	/* check and/or set fingerprint */
 	set_fingerprint();
